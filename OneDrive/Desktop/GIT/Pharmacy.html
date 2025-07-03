@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pharmacy Management</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f7f9;
+    }
+
+    header {
+      background-color: #0d6efd;
+      color: white;
+      padding: 15px 20px;
+      text-align: center;
+      font-size: 24px;
+    }
+
+    nav {
+      background-color: #e9ecef;
+      padding: 10px 20px;
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #0d6efd;
+    }
+
+    .container {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #0d6efd;
+    }
+
+    .btn {
+      background-color: #0d6efd;
+      color: white;
+      padding: 8px 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #0b5ed7;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  Pharmacy Management System
+</header>
+
+<nav>
+  <a href="#">Dashboard</a>
+  <a href="#">Medicines</a>
+  <a href="#">Billing</a>
+  <a href="#">Reports</a>
+</nav>
+
+<div class="container">
+  <div class="card">
+    <h3>Medicine Stock</h3>
+    <table>
+      <tr><th>Name</th><th>Qty</th><th>Status</th></tr>
+      <tr><td>Paracetamol</td><td>100</td><td>In Stock</td></tr>
+      <tr><td>Amoxicillin</td><td>50</td><td>Low Stock</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Billing Section</h3>
+    <p>Total Sales Today: ₹5,200</p>
+    <button class="btn">Generate Bill</button>
+  </div>
+
+  <div class="card">
+    <h3>Expired Medicines</h3>
+    <ul>
+      <li>Cough Syrup – Expired on 2025-05-01</li>
+      <li>Vitamin D – Expired on 2025-04-20</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Add New Medicine</h3>
+    <form>
+      <input type="text" placeholder="Medicine Name" style="width: 100%; padding: 8px;"><br><br>
+      <input type="number" placeholder="Quantity" style="width: 100%; padding: 8px;"><br><br>
+      <button class="btn">Add Medicine</button>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>
